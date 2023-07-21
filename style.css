@@ -1,0 +1,96 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --black: #4D4C59;
+    --purple: #6C63FF;
+    --light-grey: #C8C8C8;
+    --text-color: #9C9AB6;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: white;
+}
+
+#background-image {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 0;
+}
+
+#top-image {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+}
+
+#bottom-image {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+
+#content {
+    display: grid;
+    grid-template-areas:
+        "countdown content-image"
+    ;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    padding: 60px;
+}
+
+#countdown {
+    grid-area: countdown;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+}
+
+#countdown h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--purple);
+}
+
+#countdown p {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+#countdown button {
+    width: 160px;
+    height: 46px;
+    font-size: 16px;
+    font-size: 500;
+    background: var(--purple);
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+
+#countdown button:hover {
+    cursor: pointer;
+}
+
+#content-image {
+    grid-area: content-image;
+    display: flex;
+}
+
+#content-image img {
+    width: auto;
+}
